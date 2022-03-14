@@ -44,3 +44,14 @@ int8, user_id int8, primary key (id));
 create table file (id bigserial not null, name varchar(255), primary key (id));
 create table post_files (post_id int8 not null, file_id int8 not null,
 primary key (file_id, post_id));
+drop type if exists post_status_enum;
+
+Create type post_status_enum as ENUM ('ACTIVE', 'NOT_ACTIVE');
+create table if not exists post (
+id serial primary key not null,
+blog_id int,
+title varchar(150),
+content text,
+"user" int,
+postStatus post_status_enum default 'ACTIVE'
+);
