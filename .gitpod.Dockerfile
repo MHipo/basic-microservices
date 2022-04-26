@@ -60,3 +60,6 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && sdk install java 17.0.
 
 RUN curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && \
     sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+# Tensorflow recommender
+# pip install tensorflow-recommenders
