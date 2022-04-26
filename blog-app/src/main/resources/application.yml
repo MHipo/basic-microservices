@@ -17,9 +17,10 @@ spring:
         password: postgres
         url: jdbc:postgresql://localhost:5432/blogs
         driverClassName: org.postgresql.Driver
-    logging:
-        file: logs/blogging-service.log
-        level:
-            org.hibernate.SQL: ERROR
-            org.springframework.data: DEBUG
+logging:
+    file: 
+        name: logs/blogging-service.log
+    level:
+        org.hibernate.SQL: ERROR
+        org.springframework.data: DEBUG
     
