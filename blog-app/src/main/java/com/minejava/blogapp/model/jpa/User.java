@@ -5,15 +5,15 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.util.Set;
-        @Data
-        @Builder
-        @NoArgsConstructor
-        @AllArgsConstructor
-        @ToString(exclude = {"posts"})
-        @EqualsAndHashCode(exclude = {"posts"})
-        @Entity(name = "`user`")
-        public class User implements Serializable {
-        public User(String username, String password, String email) {
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(exclude = {"posts"})
+@EqualsAndHashCode(exclude = {"posts"})
+@Entity(name = "`user`")
+public class User implements Serializable {
+    public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
